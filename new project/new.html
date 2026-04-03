@@ -320,13 +320,17 @@
         window.addEventListener('load', updateView); // Initial load
 
         // --- Razorpay Integration ---
+        // REPLACE THIS WITH YOUR KEY FROM RAZORPAY DASHBOARD (https://dashboard.razorpay.com/app/keys)
+        const RAZORPAY_KEY_ID = "rzp_live_SYy2GkLvW6SqSy"; // OR use rzp_test_... for testing
+
         document.getElementById('pay-button').onclick = function(e) {
+            if (RAZORPAY_KEY_ID === "rzp_test_YOUR_TEST_KEY") {
+                alert("Please update your Razorpay Key ID in new.html");
+                return;
+            }
+
             var options = {
-                // Replace this line in the code: 
-                // key: 'rzp_test_YOUR_TEST_KEY', 
-                // With your actual Razorpay test key from: 
-                // `https://dashboard.razorpay.com/app/keys`
-                "key": "rzp_live_SYy2GkLvW6SqSy", 
+                "key": RAZORPAY_KEY_ID, 
                 "amount": "49900", // 499 INR in paise
                 "currency": "INR",
                 "name": "SnapCut AI",
