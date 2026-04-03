@@ -322,7 +322,11 @@
         // --- Razorpay Integration ---
         document.getElementById('pay-button').onclick = function(e) {
             var options = {
-                "key": "rzp_live_SYy2GkLvW6SqSy", // YOUR_RAZORPAY_KEY_ID from .env
+                // Replace this line in the code: 
+                // key: 'rzp_test_YOUR_TEST_KEY', 
+                // With your actual Razorpay test key from: 
+                // `https://dashboard.razorpay.com/app/keys`
+                "key": "rzp_live_SYy2GkLvW6SqSy", 
                 "amount": "49900", // 499 INR in paise
                 "currency": "INR",
                 "name": "SnapCut AI",
