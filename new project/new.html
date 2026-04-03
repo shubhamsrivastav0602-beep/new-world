@@ -290,7 +290,7 @@
     <script>
         // --- Navigation Logic (Single Page Application) ---
         function navigateTo(sectionId) {
-            // Update URL without reloading
+            // Update URL hash without reloading
             history.pushState(null, '', '#' + sectionId);
             updateView();
         }
